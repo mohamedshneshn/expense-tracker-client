@@ -27,6 +27,18 @@ function Home() {
   const [editData, setEditData] = React.useState(null); //to store data of transaction to edit
 
   const [recordDelete, setRecordDelete] = React.useState(null); //to store data of transaction to delete
+ const [url, setUrl] = React.useState("http://localhost:5002/");
+  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    // dev code
+    console.log("development");
+    setUrl("http://localhost:5002/");
+    
+  } else {
+    // production code
+    setUrl("https://expense-tracker-v1.adaptable.app/");
+    console.log("production");
+  }
+
 
   
 
@@ -34,12 +46,14 @@ function Home() {
     const user = JSON.parse(localStorage.getItem("token"));
 
     if(editData) {
-      axios.post("http://localhost:5002/transactions/edit-transaction", { ...values, user_id: user._id, _id: editData._id })
+      
+      
+      axios.post( url+"transactions/edit-transaction", { ...values, user_id: user._id, _id: editData._id })
       .then ((res) => {  message.success("Transaction updated successfully"); getTransactions();  setShowAddEditModal(false);  })
       .catch((err) => console.log(err));
       
     } else {
-      axios.post("http://localhost:5002/transactions/add-transaction", { ...values, user_id: user._id })
+      axios.post(url+"transactions/add-transaction", { ...values, user_id: user._id })
       .then ((res) => { message.success("Transaction added successfully"); getTransactions(); setEditData(null);  setShowAddEditModal(false);  })
       .catch((err) => console.log(err));
      
@@ -51,14 +65,14 @@ function Home() {
 
   const getTransactions = () => {            //to get all transactions from database for a particular user
     const user = JSON.parse(localStorage.getItem("token"));
-    axios.post("http://localhost:5002/transactions/user-transactions", { user_id: user._id , customDate, selectedCustomDate , customType})
+    axios.post(url+"transactions/user-transactions", { user_id: user._id , customDate, selectedCustomDate , customType})
     .then((res) =>  { setTransactionsData(res.data);  })
     .catch((err) => message.error("Something went wrong"));
   };
 
   const deleteTransaction = (id) => {   //to delete a transaction from database
     const user = JSON.parse(localStorage.getItem("token"));
-    axios.post("http://localhost:5002/transactions/delete-transaction", { _id: id, user_id: user._id })
+    axios.post(url+"transactions/delete-transaction", { _id: id, user_id: user._id })
     .then((res) => { message.success("Transaction Deleted Successfully"); getTransactions(); })
     .catch((err) => message.error("Something went wrong"));
    
