@@ -27,17 +27,18 @@ function Home() {
   const [editData, setEditData] = React.useState(null); //to store data of transaction to edit
 
   const [recordDelete, setRecordDelete] = React.useState(null); //to store data of transaction to delete
- const [url, setUrl] = React.useState("http://localhost:5002/");
-  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    // dev code
-    console.log("development");
-    setUrl("http://localhost:5002/");
+  const url = "http://localhost:5002/";
+//  const [url, setUrl] = React.useState("http://localhost:5002/");
+  // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  //   // dev code
+  //   console.log("development");
+  //   setUrl("http://localhost:5002/");
     
-  } else {
-    // production code
-    setUrl("https://expense-tracker-v1.adaptable.app/");
-    console.log("production");
-  }
+  // } else {
+  //   // production code
+  //   setUrl("https://expense-tracker-v1.adaptable.app/");
+  //   console.log("production");
+  // }
 
 
   

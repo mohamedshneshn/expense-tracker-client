@@ -11,17 +11,19 @@ function Login() {
   const [loading, setLoading] = React.useState(false);   // loading state for spinner
   const navigate = useNavigate();                        // navigate hook for redirecting to other pages
   const [error, setError] = React.useState("");          // error state for error message from server
-  const [url, setUrl] = React.useState("http://localhost:5002/");
-  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    // dev code
-    console.log("development");
-    setUrl("http://localhost:5002/");
+  const url = "http://localhost:5002/";
+
+  // const [url, setUrl] = React.useState("http://localhost:5002/");
+  // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  //   // dev code
+  //   console.log("development");
+  //   setUrl("http://localhost:5002/");
     
-  } else {
-    // production code
-    setUrl("https://expense-tracker-v1.adaptable.app/");
-    console.log("production");
-  }
+  // } else {
+  //   // production code
+  //   setUrl("https://expense-tracker-v1.adaptable.app/");
+  //   console.log("production");
+  // }
 
 
   const onFinish = (values) => {

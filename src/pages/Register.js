@@ -11,17 +11,18 @@ function Register() {
   const [error, setError] = React.useState("");
   const [loading, setLoading] = React.useState(false);
   const navigate = useNavigate();
-  const [url, setUrl] = React.useState("http://localhost:5002/");
-  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    // dev code
-    console.log("development");
-    setUrl("http://localhost:5002/");
+  const url = "https://expense-tracker-v1.adaptable.app/";
+  // const [url, setUrl] = React.useState("http://localhost:5002/");
+  // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+  //   // dev code
+  //   console.log("development");
+  //   setUrl("http://localhost:5002/");
     
-  } else {
-    // production code
-    setUrl("https://expense-tracker-v1.adaptable.app/");
-    console.log("production");
-  }
+  // } else {
+  //   // production code
+  //   setUrl("https://expense-tracker-v1.adaptable.app/");
+  //   console.log("production");
+  // }
 
     const onFinish = (values) => {
         setLoading(true);
