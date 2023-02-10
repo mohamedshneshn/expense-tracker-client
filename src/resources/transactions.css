@@ -1,0 +1,31 @@
+.filter {
+    box-shadow: 0 0 3px 0 gray ;
+    padding: 10px 20px;
+    border-radius: 10px;
+    overflow-x: scroll !important;
+}
+
+.view-switch {
+    border : 1px solid #ccc;
+    cursor: pointer;
+}
+
+.view-switch .mx-2:hover {
+     color: gray
+}
+
+
+/* @media only screen and (max-width: 940px) {
+    .filter {
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    .filter-item {
+        margin: 10px 0;
+    }
+} */
+    
