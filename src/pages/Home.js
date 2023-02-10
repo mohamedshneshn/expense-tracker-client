@@ -27,7 +27,7 @@ function Home() {
   const [editData, setEditData] = React.useState(null); //to store data of transaction to edit
 
   const [recordDelete, setRecordDelete] = React.useState(null); //to store data of transaction to delete
-  const url = "http://localhost:5002/";
+  const url = "https://expense-tracker-v1.adaptable.app/";
 //  const [url, setUrl] = React.useState("http://localhost:5002/");
   // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
   //   // dev code

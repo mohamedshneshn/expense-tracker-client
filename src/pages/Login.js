@@ -11,7 +11,7 @@ function Login() {
   const [loading, setLoading] = React.useState(false);   // loading state for spinner
   const navigate = useNavigate();                        // navigate hook for redirecting to other pages
   const [error, setError] = React.useState("");          // error state for error message from server
-  const url = "http://localhost:5002/";
+  // const url = "https://expense-tracker-v1.adaptable.app/";
 
   // const [url, setUrl] = React.useState("http://localhost:5002/");
   // if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
@@ -29,7 +29,7 @@ function Login() {
   const onFinish = (values) => {
     setLoading(true);
     // console.log("Success:", values);
-    axios.post(url+"users/login", values)
+    axios.post("https://expense-tracker-v1.adaptable.app/users/login", values)
       .then((res) => {
         message.success("Login Successful");
         if (typeof window !== "undefined") {   // if window is defined then only the local storage will be set
