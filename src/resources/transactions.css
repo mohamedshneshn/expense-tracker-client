@@ -8,7 +8,7 @@
 .view-switch {
     border : 1px solid #ccc;
     cursor: pointer;
-    margin-right: 68px;
+    margin-right: 30px;
 }
 
 .view-switch .mx-2:hover {
@@ -16,17 +16,28 @@
 }
 
 
-@media only screen and (max-width: 940px) {
-    .filter {
-      
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 0;
-    }
+@media only screen and (max-width: 911px) {
     .filter-item {
-        margin: 10px 0;
+        display: flex !important;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-column {
+        margin : 10px 0 !important;
+    }
+    .flex-type {
+        margin-left : -20px  !important;
+    }
+    .view-switch {
+        margin: 20px 0 !important;
+      
+    }
+    .btn-add {
+        margin: 20px 0 !important;
+    }
+    .filter-right {
+        margin-top: 20px !important;
     }
 }
     

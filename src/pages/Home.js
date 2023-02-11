@@ -196,7 +196,7 @@ const columns = [
                     </Space>
                      )}
              </div>
-             <div className="d-flex  flex-column mx-5">      
+             <div className="d-flex  flex-column flex-type mx-5">      
                   <h6>Select Type </h6>
                       <Space wrap>
                         <Select
@@ -223,13 +223,13 @@ const columns = [
                       </Space>
              </div>
            </div>
-          <div className="filter-item d-flex  space-between">
-               <div className="view-switch d-flex   align-items-center justify-content-between   ">
+          <div className="filter-item d-flex  space-between filter-right">
+               <div className="view-switch d-flex   align-items-center justify-content-between  mx-5">
                  <UnorderedListOutlined className="mx-2" style={{fontSize: "30px"}}  value = {viewType} onClick={() => setViewType("table")}/>
                  <AreaChartOutlined className="mx-2" style={{fontSize: "30px"}} value = {viewType} onClick={() => setViewType("chart")}/>
               </div>
               <div >
-              <button className="btn btn-primary" onClick={() => {  setEditData(null); setInitialValues(); setShowAddEditModal(true);   }}>Add Transaction</button>
+              <button className="btn btn-primary btn-add" onClick={() => {  setEditData(null); setInitialValues(); setShowAddEditModal(true);   }}>Add Transaction</button>
               </div>
            </div>
       </div>  
