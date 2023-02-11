@@ -37,6 +37,6 @@ Label ,a {
 }
 
 .text-danger {
-    color: #ff4d4f;
+    color: #ff4d4f !important;
     margin-top: -15px;
 }
