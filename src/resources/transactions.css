@@ -29,3 +29,6 @@
     }
 } */
     
+.ant-table-content {
+    overflow-x: scroll !important;
+}

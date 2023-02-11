@@ -162,7 +162,7 @@ const columns = [
                  <h6>Select Date Range</h6>
                   <Space wrap>
                     <Select
-                      defaultValue="30"
+                      defaultValue="365"
                       style={{ width: 150 }}
                       onChange={(value) => setCustomDate(value)}
                       options={[
