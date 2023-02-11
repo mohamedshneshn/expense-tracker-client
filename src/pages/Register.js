@@ -81,7 +81,7 @@ function Register() {
             >
               <Input />
             </Form.Item>
-            {error === "Username already exists" && <p style={{color: "red"}}>{error}</p>}
+            {error === "Username already exists" && <div className="text-danger">{error}</div>}
 
             <Form.Item
               label="Email"
