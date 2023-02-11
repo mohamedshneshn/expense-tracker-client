@@ -159,11 +159,11 @@ const columns = [
       <div className="filter d-flex justify-content-between align-items-center">
           <div className="filter-item d-flex  space-between">
              <div className="d-flex  flex-column">
-                 <h6>Select Date Range</h6>
+                 <h6>Select Date</h6>
                   <Space wrap>
                     <Select
                       defaultValue="365"
-                      style={{ width: 150 }}
+                      style={{ width: 120 }}
                       onChange={(value) => setCustomDate(value)}
                       options={[
                         {
@@ -224,7 +224,7 @@ const columns = [
              </div>
            </div>
           <div className="filter-item d-flex  space-between">
-               <div className="view-switch d-flex   align-items-center justify-content-between   mx-5">
+               <div className="view-switch d-flex   align-items-center justify-content-between   ">
                  <UnorderedListOutlined className="mx-2" style={{fontSize: "30px"}}  value = {viewType} onClick={() => setViewType("table")}/>
                  <AreaChartOutlined className="mx-2" style={{fontSize: "30px"}} value = {viewType} onClick={() => setViewType("chart")}/>
               </div>

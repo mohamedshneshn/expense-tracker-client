@@ -2,12 +2,13 @@
     box-shadow: 0 0 3px 0 gray ;
     padding: 10px 20px;
     border-radius: 10px;
-    overflow-x: scroll !important;
+    /* overflow-x: scroll !important; */
 }
 
 .view-switch {
     border : 1px solid #ccc;
     cursor: pointer;
+    margin-right: 68px;
 }
 
 .view-switch .mx-2:hover {
@@ -15,7 +16,7 @@
 }
 
 
-/* @media only screen and (max-width: 940px) {
+@media only screen and (max-width: 940px) {
     .filter {
       
         display: flex;
@@ -27,7 +28,7 @@
     .filter-item {
         margin: 10px 0;
     }
-} */
+}
     
 .ant-table-content {
     overflow-x: scroll !important;
