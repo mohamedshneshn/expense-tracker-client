@@ -64,12 +64,12 @@ function Login() {
           <Form layout="vertical" name="basic" initialValues={{ remember: true }}  onFinish={onFinish} >
             <h1 >EXPENSE-TRACER / LOGIN</h1>
 
-            <Form.Item label="Email"  name="email" rules={[{ required: true, message: "Please input your email!" }]}>
+            <Form.Item label="Email"  name="email" rules={[{ required: true, message: "Please input your email!" }]} initialValue="demo@gmail.com" >
               <Input />
             </Form.Item>
             {error === "User Not Found" &&  <div className="text-danger">{error}</div>}
           
-            <Form.Item label="Password" name="password"rules={[{ required: true, message: "Please input your password!" }]} >
+            <Form.Item label="Password" name="password"rules={[{ required: true, message: "Please input your password!" }]} initialValue="123Demo" >
               <Input.Password />
             </Form.Item>
             {error === "Incorrect Password" &&  <div className="text-danger">{error}</div>}
